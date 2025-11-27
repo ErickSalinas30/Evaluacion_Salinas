@@ -1,1 +1,11 @@
-<p>pages works!</p>
+<h1>Hello</h1>
+<h1>TVmaze API</h1>
+<p>Api encargada de recibir y detectar tv maze</p>
+
+<div>
+    <input type="text" placeholder="Ingrese una letra: " [ngModel]="query" (keyup.enter)="buscar()" />
+    <button (click)="buscar()">Buscar</button>
+</div>
+
+<p *ngIf="resultados.length === 0 && query">No se encuentran resultadors "{{ query }}"</p>
+
